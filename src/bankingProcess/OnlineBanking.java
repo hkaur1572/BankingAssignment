@@ -288,7 +288,7 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 	public void exit(){
 		
 			// TODO Auto-generated method stub
-			System.out.println("Welcome to Scotia Bank");	
+			System.out.println("Welcome to Scotia local bank branch");	
 		
 		}
 	
