@@ -74,7 +74,10 @@ public class MainProcess {
 				if (input7.equalsIgnoreCase("transfer")) {
 					online.fundTransfer();
 
-				}else if (input7.equalsIgnoreCase("exitE")) {
+				} else if (input7.equalsIgnoreCase("investment")) {
+					online.Invsetment();
+				}
+				else if (input7.equalsIgnoreCase("exitE")) {
 					online.exit();
 				}
 
@@ -93,9 +96,14 @@ public class MainProcess {
 					}
 
 				} else {
-
+try {
 					System.out.println("Your account is locked ");
 				}
+
+finally {
+					System.out.println("Your account is locked plase take out card ");
+				}
+}
 
 			}
 

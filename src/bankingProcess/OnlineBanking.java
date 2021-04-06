@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 	Scanner sc1 = new Scanner(System.in);
+
 	public void continueOrExit1() {
-		
-	
+
 		System.out
 				.println("Please enter Continue if you want to performe other operations or Exit to go to home screen");
 
@@ -25,7 +25,7 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 
 			} else if (input4.trim().equalsIgnoreCase("userProfilePage")) {
 				// atm.
-			//	getbalance();
+				// getbalance();
 			}
 
 		} else if (input2.trim().equalsIgnoreCase("exit")) {
@@ -34,6 +34,7 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 		}
 
 	}
+
 //personAccount person1= new personAccount();
 	@Override
 	public void deposit() {
@@ -66,10 +67,10 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 					System.out.println("money in your checking account is " + personAccount.checking);
 					System.out.println("money in your saving account is " + personAccount.saving);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.saving < transfer1) {
 					System.out.println("your saving account has only " + personAccount.saving + " availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 
 			} else if (input6.equalsIgnoreCase("TFSA")) {
@@ -81,10 +82,10 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 					System.out.println("money in your checking account is " + personAccount.checking);
 					System.out.println("money in your saving account is " + personAccount.TFSA);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.TFSA < transfer2) {
 					System.out.println("your TFSA account has only " + personAccount.TFSA + "availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 
 			} else if (input6.equalsIgnoreCase("visa ")) {
@@ -99,15 +100,13 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 					System.out.println("money in your checking account is " + personAccount.checking);
 					System.out.println("money in your saving account is " + personAccount.visa);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.visa < transfer3) {
 					System.out.println("your TFSA account has only " + personAccount.visa + "availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 			}
 
-			
-			
 		}
 //transfer in saving account 
 		else if (input5.equalsIgnoreCase("saving")) {
@@ -125,7 +124,7 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 					continueOrExit1();
 				} else if (personAccount.saving < transfer1) {
 					System.out.println("your saving account has only " + personAccount.saving + " availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 
 			} else if (input6.equalsIgnoreCase("TFSA")) {
@@ -137,10 +136,10 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 					System.out.println("money in your saving account is " + personAccount.saving);
 					System.out.println("money in your TFSA account is " + personAccount.TFSA);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.TFSA < transfer2) {
 					System.out.println("your TFSA account has only " + personAccount.TFSA + "availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 			} else if (input6.equalsIgnoreCase("Visa")) {
 				System.out.println("There are some charges if you do cash trnasfer from your visa card ");
@@ -150,17 +149,17 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 				if (personAccount.TFSA > t6) {
 					personAccount.visa -= t6;
 					personAccount.saving += t6;
-					
+
 					System.out.println("money in your Visa card is " + personAccount.visa);
 					System.out.println("money in your saving account is " + personAccount.saving);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.TFSA < t6) {
 					System.out.println("your TFSA account has only " + personAccount.TFSA + "availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 			}
-			}
+		}
 		// transfer in visa card
 		else if (input5.equalsIgnoreCase("visa")) {
 			System.out.println("Please enter the account name from which you want to transfer the money");
@@ -174,10 +173,10 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 					System.out.println("money in your checking account is " + personAccount.checking);
 					System.out.println("money in your saving account is " + personAccount.visa);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.checking < transfer1) {
 					System.out.println("your checking account has only " + personAccount.checking + " availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 
 			} else if (input6.equalsIgnoreCase("TFSA")) {
@@ -191,52 +190,50 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 					System.out.println("money in your visa account is " + personAccount.visa);
 					System.out.println("money in your TFSA account is " + personAccount.TFSA);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.TFSA < transfer2) {
 					System.out.println("your TFSA account has only " + personAccount.TFSA + "availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 			} else if (input6.equalsIgnoreCase("saving")) {
 				System.out.println("There are some charges if you do transfer from your saving account to visa card ");
 				// continue function call
 				System.out.println("Please enter the amount of money you  want to transfer");
 				double t6 = sc1.nextDouble();
-				if (personAccount.saving> t6) {
+				if (personAccount.saving > t6) {
 					personAccount.visa += t6;
 					personAccount.saving -= t6;
-					
+
 					System.out.println("money in your Visa card is " + personAccount.visa);
 					System.out.println("money in your saving account is " + personAccount.saving);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.TFSA < t6) {
 					System.out.println("your saving account has only " + personAccount.saving + "availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 			}
-			
-			
-			}
+
+		}
 		// when transfer to TFSA account
 		// ifelse{}
-		
-		
+
 		else if (input5.equalsIgnoreCase("TFSA")) {
 			System.out.println("Please enter the account name from which you want to transfer the money");
 			String input6 = sc1.next();
 			if (input6.equalsIgnoreCase("checking")) {
 				System.out.println("Please enter the amount of money you  want to transfer");
 				double transfer1 = sc1.nextDouble();
-				if (personAccount.TFSA> transfer1) {
+				if (personAccount.TFSA > transfer1) {
 					personAccount.checking -= transfer1;
 					personAccount.TFSA += transfer1;
 					System.out.println("money in your checking account is " + personAccount.checking);
 					System.out.println("money in your saving account is " + personAccount.TFSA);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.checking < transfer1) {
 					System.out.println("your checking account has only " + personAccount.checking + " availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 
 			} else if (input6.equalsIgnoreCase("saving")) {
@@ -250,48 +247,132 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 					System.out.println("money in your Saving account is " + personAccount.saving);
 					System.out.println("money in your TFSA account is " + personAccount.TFSA);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.saving < transfer2) {
 					System.out.println("your saving account has only " + personAccount.saving + "availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 			} else if (input6.equalsIgnoreCase("visa")) {
 				System.out.println("There are some charges if you do transfer from your saving account to visa card ");
 				// continue function call
 				System.out.println("Please enter the amount of money you  want to transfer");
 				double t6 = sc1.nextDouble();
-				if (personAccount.visa> t6) {
+				if (personAccount.visa > t6) {
 					personAccount.visa -= t6;
 					personAccount.TFSA += t6;
-					
+
 					System.out.println("money in your Visa card is " + personAccount.visa);
 					System.out.println("money in your TFSA account is " + personAccount.TFSA);
 					System.out.println(" total money in your  account is " + personAccount.totalFunds);
-					 continueOrExit1();
+					continueOrExit1();
 				} else if (personAccount.visa < t6) {
 					System.out.println("your saving account has only " + personAccount.visa + "availble ");
-					 continueOrExit1();
+					continueOrExit1();
 				}
 			}
-			
-			
+
 		}
 	}
 
 	@Override
 	public void Invsetment() {
-		// TODO Auto-generated method stub
 
+		// TODO Auto-generated method stub
+		Scanner sc1 = new Scanner(System.in);
+		System.out.println("Please enter the account name in which you want to transfer the money");
+		String T1 = sc1.next();
+		if (T1.equalsIgnoreCase("TFSA")) {
+			System.out.println("Please enter the account name from which you want to transfer the money");
+			String T2 = sc1.next();
+			if (T2.equalsIgnoreCase("checking")) {
+				System.out.println("Please enter the amount of money you  want to transfer");
+				double transfer1 = sc1.nextDouble();
+				if (personAccount.checking > transfer1) {
+					personAccount.checking -= transfer1;
+					personAccount.TFSA += transfer1;
+					System.out.println("money in your checking account is " + personAccount.checking);
+					System.out.println("money in your TFSA account is " + personAccount.TFSA);
+					System.out.println(" total money in your  account is " + personAccount.totalFunds);
+					continueOrExit1();
+				} else if (personAccount.checking < transfer1) {
+					System.out.println("your saving account has only " + personAccount.checking + " availble ");
+					continueOrExit1();
+				}
+
+			}
+			if (T2.equalsIgnoreCase("saving")) {
+				System.out.println("Please enter the amount of money you  want to transfer");
+				double transfer1 = sc1.nextDouble();
+				if (personAccount.saving > transfer1) {
+					personAccount.saving -= transfer1;
+					personAccount.TFSA += transfer1;
+					System.out.println("money in your saving account is " + personAccount.saving);
+					System.out.println("money in your TFSA account is " + personAccount.TFSA);
+					System.out.println(" total money in your  account is " + personAccount.totalFunds);
+					continueOrExit1();
+				} else if (personAccount.saving < transfer1) {
+					System.out.println("your saving account has only " + personAccount.saving + " availble ");
+					continueOrExit1();
+				}
+
+			}
+			if (T2.equalsIgnoreCase("Visa")) {
+				System.out.println("You Cannot direcly tranfer your money from visa to your TFSA account");
+				continueOrExit1();
+			}
+		}
+		else 	if (T1.equalsIgnoreCase("RRSP")) {
+			System.out.println("Please enter the account name from which you want to transfer the money");
+			String T2 = sc1.next();
+			if (T2.equalsIgnoreCase("checking")) {
+				System.out.println("Please enter the amount of money you  want to transfer");
+				double transfer1 = sc1.nextDouble();
+				if (personAccount.RRSP > transfer1) {
+					personAccount.checking -= transfer1;
+					personAccount.RRSP += transfer1;
+					System.out.println("money in your checking account is " + personAccount.checking);
+					System.out.println("money in your RRSP account is " + personAccount.TFSA);
+					System.out.println(" total money in your  account is " + personAccount.totalFunds);
+					continueOrExit1();
+				} else if (personAccount.checking < transfer1) {
+					System.out.println("your saving account has only " + personAccount.checking + " availble ");
+					continueOrExit1();
+				}
+
+			}
+			if (T2.equalsIgnoreCase("saving")) {
+				System.out.println("Please enter the amount of money you  want to transfer");
+				double transfer1 = sc1.nextDouble();
+				if (personAccount.saving > transfer1) {
+					personAccount.saving -= transfer1;
+					personAccount.RRSP += transfer1;
+					System.out.println("money in your saving account is " + personAccount.saving);
+					System.out.println("money in your TFSA account is " + personAccount.RRSP);
+					System.out.println(" total money in your  account is " + personAccount.totalFunds);
+					continueOrExit1();
+				} else if (personAccount.saving < transfer1) {
+					System.out.println("your saving account has only " + personAccount.saving + " availble ");
+					continueOrExit1();
+				}
+
+			}
+			if (T2.equalsIgnoreCase("Visa")) {
+				System.out.println("You Cannot direcly tranfer your money from visa to your RRSP account");
+				continueOrExit1();
+			}
+		}
+		
+		
 	}
+	
 
 	@Override
-	public void exit(){
-		
-			// TODO Auto-generated method stub
-			System.out.println("Welcome to Scotia local bank branch");	
-		
-		}
-	
+	public void exit() {
+
+		// TODO Auto-generated method stub
+		System.out.println("Welcome to Scotia local bank branch");
+
+	}
 
 	@Override
 	void userIdentification() {

@@ -8,6 +8,7 @@ static double checking;
 static double saving;
 static  double TFSA;
 static double visa=2000;
+static double RRSP=0;
 private String password="preet";
 
  public String getPassword() {
