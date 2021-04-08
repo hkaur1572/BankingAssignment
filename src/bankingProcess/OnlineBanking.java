@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 	Scanner sc1 = new Scanner(System.in);
-
+personAccount p=new personAccount();
 	public void continueOrExit1() {
 
 		System.out
@@ -377,6 +377,11 @@ public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 	@Override
 	void userIdentification() {
 		// TODO Auto-generated method stub
+		if (p.getPassword().trim().equalsIgnoreCase("preet")&&(p.emailId.equalsIgnoreCase("abc@gmail.com"))) {
+		
+			getHomePage(p);
+		//	System.out.println(p.CustomerName);
+		}
 
 	}
 

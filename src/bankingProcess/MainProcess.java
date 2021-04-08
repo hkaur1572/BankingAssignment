@@ -9,7 +9,8 @@ public class MainProcess {
 		int attempt = 3;
 
 		// TODO Auto-generated method stub
-		personAccount person = new personAccount(3000, 4000, 2000);
+		personAccount person = new personAccount( "ABC123" , "Harpreet" ,3000, 4000, 2000);
+		
 		ATM atm = new ATM();
 		OnlineBanking online = new OnlineBanking();
 
@@ -69,7 +70,9 @@ public class MainProcess {
 			System.out.println("Plaese enter you password ");
 			String pass = obj.next();
 			if (person.getPassword().trim().equalsIgnoreCase(pass)) {
-				online.onlineUserHome();
+				online.userIdentification();
+				online.continueOrExit1();
+			//	online.onlineUserHome();
 				String input7 = obj.next();
 				if (input7.equalsIgnoreCase("transfer")) {
 					online.fundTransfer();
