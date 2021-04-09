@@ -1,11 +1,14 @@
 package bankingProcess;
 
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class ATM extends BankingRules implements STANDARPROCESS {
 	Scanner scanner = new Scanner(System.in);
-	personAccount person = new personAccount();
+	personAccount person1;
+
+	public ATM(personAccount ATMp) {
+		this.person1 = ATMp;
+	}
 
 	public void continueOrExit() {
 
@@ -27,7 +30,7 @@ public class ATM extends BankingRules implements STANDARPROCESS {
 
 			} else if (input4.trim().equalsIgnoreCase("checkbalance")) {
 				// atm.
-				getbalance();
+				getBalance();
 			}
 
 		} else if (input2.trim().equalsIgnoreCase("exit")) {
@@ -150,7 +153,7 @@ public class ATM extends BankingRules implements STANDARPROCESS {
 								"The Amount you enter is more than 100000 , Please go to your nearest Scotia Branch");
 						continueOrExit();
 
-					} 
+					}
 
 				}
 
@@ -209,7 +212,7 @@ public class ATM extends BankingRules implements STANDARPROCESS {
 		}
 	}
 
-	public void getbalance() {
+	public void getBalance() {
 		personAccount.totalFunds = personAccount.checking + personAccount.saving + personAccount.TFSA;
 		System.out.println("Balance in your account is " + personAccount.totalFunds);
 		continueOrExit();
@@ -231,20 +234,18 @@ public class ATM extends BankingRules implements STANDARPROCESS {
 
 	public void exit() {
 		// TODO Auto-generated method stub
-		
-			System.out.println("Welcome to Scotia Bank");
-		
-				
-		}
-		
 
-	
+		System.out.println("Welcome to Scotia Bank");
+
+	}
 
 	@Override
 	void userIdentification() {
 		// TODO Auto-generated method stub
-		HashMap<Integer, Integer> pinMap1 = new HashMap<Integer, Integer>();
+		if ((person1.getPin() == 1993) && (person1.getCardNo() == 1111)) {
+
+			getHomePage(person1);
+		}
 
 	}
-
 }

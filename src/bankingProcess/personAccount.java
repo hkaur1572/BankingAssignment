@@ -52,7 +52,7 @@ public class personAccount {
 		TFSA = Account3;
 
 		totalFunds = checking + saving + TFSA;
-	//	System.out.println(CustomerName);
+		// System.out.println(CustomerName);
 	}
 
 }

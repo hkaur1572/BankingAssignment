@@ -4,7 +4,12 @@ import java.util.Scanner;
 
 public class OnlineBanking extends BankingRules implements STANDARPROCESS {
 	Scanner sc1 = new Scanner(System.in);
-personAccount p=new personAccount();
+	personAccount p;
+
+	public OnlineBanking(personAccount P) {
+		this.p = P;
+	}
+
 	public void continueOrExit1() {
 
 		System.out
@@ -19,17 +24,16 @@ personAccount p=new personAccount();
 
 				fundTransfer();
 
-			} else if (input4.trim().equalsIgnoreCase("invenstment")) {
-				// atm.
-				deposit();
+			} else if (input4.trim().equalsIgnoreCase("investment")) {
 
-			} else if (input4.trim().equalsIgnoreCase("userProfilePage")) {
-				// atm.
-				// getbalance();
+				Invsetment();
+
+			} else if (input4.trim().equalsIgnoreCase("Profile")) {
+				userProfilePage();
 			}
 
 		} else if (input2.trim().equalsIgnoreCase("exit")) {
-			System.out.println("Welcome to Scotia Bank");
+			exit();
 
 		}
 
@@ -51,7 +55,7 @@ personAccount p=new personAccount();
 	@Override
 	public void fundTransfer() {
 		// TODO Auto-generated method stub
-		Scanner sc1 = new Scanner(System.in);
+
 		System.out.println("Please enter the account name in which you want to transfer the money");
 
 		String input5 = sc1.next();
@@ -278,7 +282,7 @@ personAccount p=new personAccount();
 	public void Invsetment() {
 
 		// TODO Auto-generated method stub
-		Scanner sc1 = new Scanner(System.in);
+
 		System.out.println("Please enter the account name in which you want to transfer the money");
 		String T1 = sc1.next();
 		if (T1.equalsIgnoreCase("TFSA")) {
@@ -320,8 +324,7 @@ personAccount p=new personAccount();
 				System.out.println("You Cannot direcly tranfer your money from visa to your TFSA account");
 				continueOrExit1();
 			}
-		}
-		else 	if (T1.equalsIgnoreCase("RRSP")) {
+		} else if (T1.equalsIgnoreCase("RRSP")) {
 			System.out.println("Please enter the account name from which you want to transfer the money");
 			String T2 = sc1.next();
 			if (T2.equalsIgnoreCase("checking")) {
@@ -361,10 +364,17 @@ personAccount p=new personAccount();
 				continueOrExit1();
 			}
 		}
-		
-		
+
 	}
-	
+
+	public void userProfilePage() {
+
+		System.out.println("Name of Account holder " + p.CustomerName + "\n" + "Account Number of Person "
+				+ p.AccountNumber + "\n" + " Checking Account " + personAccount.checking + "\n" + "Saving Account " + personAccount.saving
+				+ "\n" + "TFSA Account " + personAccount.TFSA + "\n" + "RRSP Account" + personAccount.RRSP + "\n" + "Total Account balance"
+				+ personAccount.totalFunds);
+
+	}
 
 	@Override
 	public void exit() {
@@ -377,10 +387,10 @@ personAccount p=new personAccount();
 	@Override
 	void userIdentification() {
 		// TODO Auto-generated method stub
-		if (p.getPassword().trim().equalsIgnoreCase("preet")&&(p.emailId.equalsIgnoreCase("abc@gmail.com"))) {
-		
+		if (p.getPassword().trim().equalsIgnoreCase("preet") && (p.emailId.equalsIgnoreCase("abc@gmail.com"))) {
+
 			getHomePage(p);
-		//	System.out.println(p.CustomerName);
+			// System.out.println(p.CustomerName);
 		}
 
 	}
